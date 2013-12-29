@@ -16,6 +16,7 @@ This can be done by:
 - Save file
 
 ####Notes for using AT Commands
+All of these commands work on the Quectel M10 GSM module which is used on the Arduino GSM Shield.  If using other GSM modules, consult the data sheet or manual for that specific module.  Each company adds and uses different commands which may cause confusion.  That being said, there is a list of standard AT Commands which work across all modules.  They too can be found online.  Below are all most common commands.
 
 - __AT__  Check to see if the module is active.  Should return 'OK'
 - __AT+CREG?__ Is the module registered to the network?
