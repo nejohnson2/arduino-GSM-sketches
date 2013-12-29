@@ -14,3 +14,16 @@ This can be done by:
 - Find the file Resources > Java > libraries > SoftwareSerial > SoftwareSerial.h
 - Change the line: __#define _SS_MAX_RX_BUFF 64__   to __#define _SS_MAX_RX_BUFF 256__
 - Save file
+
+####Notes for sending text messages
+
+- __AT__  Check to see if the module is active.  Should return 'OK'
+- __AT+CREG?__ Is the module registered to the network?
+- __AT+COPS?__ What network is the module registered?
+- __AT+CMGF=1__ This puts the module into text mode so messages can be sent/received
+- __AT+CMGS="number",129,__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex.
+- __AT+CMGL="ALL"__ View all text messages
+- __AT+CMGR=<index>__ Read SMS message at index number
+- __AT+QBAND?__ What band am I on?
+- __AT+CIMI__ Get the IMSI number from the module
+- __AT+CSQ__ Check the signal strength
