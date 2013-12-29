@@ -1,3 +1,11 @@
+/*
+  This sketch uses the Arduino GSM Shield to allow the user to send AT Commands to the GSM module 
+  directly without needing the Arduino GSM Library.  Upload this sketch, open a serial application
+  like CoolTerm, and begin sending commands.
+  
+  Developed by Benedetta Simeonidis
+  
+*/
 #include <SoftwareSerial.h>
 
 SoftwareSerial mySerial(2, 3);
@@ -27,7 +35,7 @@ void setup()
   mySerial.print("AT+CMGS=\"");
   // CHANGE THE NUMBER BELOW! 
   // 129 for domestic #s, 145 if with +area code in front of #
-  mySerial.print("3474951237\",129");                                         //this is where you would replace the phone number
+  mySerial.print("1234567\",129");                                         //this is where you would replace the phone number
   mySerial.print("\r");
   delay(300);
   // TYPE THE BODY OF THE TEXT HERE! 160 CHAR MAX!
