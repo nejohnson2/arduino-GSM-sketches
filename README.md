@@ -19,7 +19,7 @@ For the GSM Library:
 
 - Go to the Arduino application (Applications > Arduino and right click.  Select 'Show Package Contents'
 - Find the file Resources > Java > libraries > GSM > GSM3CircularBuffer.h 
-- Change the line: __#define __BUFFERSIZE__ __128__   to __#define __BUFFERSIZE__ __128__  
+- Change the line: __#define __BUFFERSIZE__ __128__   to __#define __BUFFERSIZE__ __256__  
 - (I also changed the __BUFFERMASK__ value to 0xFF though I'm not sure that is necessary)
 - Save file
 
