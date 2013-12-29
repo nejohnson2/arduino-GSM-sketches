@@ -15,7 +15,7 @@ This can be done by:
 - Change the line: __#define _SS_MAX_RX_BUFF 64__   to __#define _SS_MAX_RX_BUFF 256__
 - Save file
 
-####Notes for sending text messages
+####Notes for using AT Commands
 
 - __AT__  Check to see if the module is active.  Should return 'OK'
 - __AT+CREG?__ Is the module registered to the network?
