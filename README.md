@@ -10,14 +10,7 @@ If using the SoftwareSerial Library, modify the SoftwareSerial.h file and to inc
 
 This can be done by:
 
-1) Go to the Arduino application (Applications > Arduino) and right click. Select show package contents
-2) Find the file Resources > Java > libraries > SoftwareSerial > SoftwareSerial.h
-3) Change the line 
-
-#define _SS_MAX_RX_BUFF 64 // RX buffer size
-
-to
-
-#define _SS_MAX_RX_BUFF 256 // RX buffer size
-
-4) Save file
+- Go to the Arduino application (Applications > Arduino) and right click. Select show package contents
+- Find the file Resources > Java > libraries > SoftwareSerial > SoftwareSerial.h
+- Change the line: __#define _SS_MAX_RX_BUFF 64__   to __#define _SS_MAX_RX_BUFF 256__
+- Save file
