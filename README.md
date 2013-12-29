@@ -1,4 +1,4 @@
-###Arduino GSM Sketchs
+###Arduino GSM Sketches
 
 These are a collection of sketches to be used with the Arduino GSM Shield.  They focus primarily on using the shield through serial communication instead of using the GSM library.  
 
