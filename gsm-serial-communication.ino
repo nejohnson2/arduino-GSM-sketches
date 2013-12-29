@@ -19,8 +19,6 @@ void setup()
   Serial.println("Hello Debug Terminal!");
   // set the data rate for the SoftwareSerial port
   mySerial.begin(9600);
-  
-  //initGSM();
 
   //Turn off echo from GSM
   mySerial.print("ATE0");
