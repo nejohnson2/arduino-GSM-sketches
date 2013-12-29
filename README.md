@@ -2,17 +2,25 @@
 
 These are a collection of sketches to be used with the Arduino GSM Shield.  They focus primarily on using the shield through serial communication instead of using the GSM library.  
 
-####Notes for the tracking sketch
+####Notes on modifiying the Arduino SoftwareSerial Library
 
-Something important to note is that I modified the GSM library in order to get this sketch to work.  The GSM3CircularBuffer.h file has a default buffer size of 128.  In order to get AT+QENG? information from the GSM module, I had to increase the size of the buffer to 256.  The __BUFFERMASK__ was also changed to 0xFF.
+In working with the Arduino GSM shield, I kept finding text messages were only being halfway delivered.  Meaning I would only see have the message.  This happened with a couple of the AT Commands that I was using which return larger amounts of information.  The problem I kept encountering is that the serial buffers in both the SoftwareSerial Library and the GSM library were too small causing the messages and information to be incomplete.  I simply edited those variables in the library in order to get things to work properly.
 
-If using the SoftwareSerial Library, modify the SoftwareSerial.h file and to increase the buffer from 64 to 256.
+If using the SoftwareSerial Library, modify the SoftwareSerial.h file to increase the buffer from 64 to 256.
 
 This can be done by:
 
 - Go to the Arduino application (Applications > Arduino) and right click. Select show package contents
 - Find the file Resources > Java > libraries > SoftwareSerial > SoftwareSerial.h
 - Change the line: __#define _SS_MAX_RX_BUFF 64__   to __#define _SS_MAX_RX_BUFF 256__
+- Save file
+
+For the GSM Library:
+
+- Go to the Arduino application (Applications > Arduino and right click.  Select 'Show Package Contents'
+- Find the file Resources > Java > libraries > GSM > GSM3CircularBuffer.h 
+- Change the line: __#define __BUFFERSIZE__ __128__   to __#define __BUFFERSIZE__ __128__  
+- (I also changed the __BUFFERMASK__ value to 0xFF though I'm not sure that is necessary)
 - Save file
 
 ####Notes for using AT Commands
