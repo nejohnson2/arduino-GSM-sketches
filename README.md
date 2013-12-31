@@ -31,7 +31,7 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 - __AT+COPS?__ What network is the module registered?
 - __AT+CMGF=1__ This puts the module into text mode so messages can be sent/received
 - __AT+CMGS="number",129,__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex.
-- __AT+CMGL="ALL"__ View all text messages
+- __AT+CMGL="ALL"__ Lists all text messages that are on the device (or network)
 - __AT+CMGR=<index>__ Read SMS message at index number
 - __AT+QBAND?__ What band am I on?
 - __AT+CIMI__ Get the IMSI number from the module
