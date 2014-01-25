@@ -1,6 +1,8 @@
 ###Arduino GSM Sketches
 
-These are a collection of sketches to be used with the Arduino GSM Shield.  They focus primarily on using the shield through serial communication instead of using the GSM library.  
+These are a collection of sketches to be used with the Arduino GSM Shield.  They focus primarily on using the shield through serial communication instead of using the Arduino GSM library.  I found the library to be clunky and not allow me to do what I wanted to do.  
+
+As an initial setup, simple upload the basic-gsm-serial-communication.ino sketch to your Arduino with the shield.  Once uploaded, use an application which lets you communicate over serial directly.  I prefer to use Cool Term.  Once you're connected over USB, push and hold the power button on the Arduino GSM shield until you see the status LED solid and the net LED blinking.
 
 ####Notes on modifiying the Arduino SoftwareSerial Library
 
