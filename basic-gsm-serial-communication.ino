@@ -1,3 +1,11 @@
+/*
+  
+  This sketch is the most basic way to communicate with the Arduino 
+  GSM Shield.  Upload the sketch and use Cool Term to send AT Commands
+  directly to the GSM Module.  
+  
+*/
+
 #include <SoftwareSerial.h>
 
 SoftwareSerial mySerial(2, 3);
