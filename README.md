@@ -30,7 +30,7 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 - __AT+CREG?__ Is the module registered to the network?
 - __AT+COPS?__ What network is the module registered?
 - __AT+CMGF=1__ This puts the module into text mode so messages can be sent/received
-- __AT+CMGS="number",129,__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex.
+- __AT+CMGS="number",129, \<body of message\> \<hex return character '1A'\>__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex.
 - __AT+CMGL="ALL"__ Lists all text messages that are on the device (or network)
 - __AT+CMGR=<index>__ Read SMS message at index number
 - __AT+QBAND?__ What band am I on?
@@ -38,13 +38,13 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 - __AT+CSQ__ Check the signal strength
 
 ####Notes on sending an SMS with AT Commands
-There are a series of commands which must be executed in order to send an SMS using AT Commands.  
+There are a series of commands which must be executed in order to send an SMS using AT Commands.  First the module must be in text mode.  Then, you must send the AT+CMGS command with the destination number, 129, body of the message and a return character.  When using Cool Term this character must be a hex character.  Not sure if this is always the case.
 
 - __AT+CMGF=1__ Set the module into text mode
-- __AT+CMGS="destination phone number", 129, <body of message> <hex return character 1A>__
+- __AT+CMGS="destination phone number", 129, \<body of message\> \<hex return character '1A'\>__
 
 ####Notes on receiving SMS messages
-
+The module must be in text mode.  Then you can query the network for all of the messages or a message at a specific index.
 - __AT+CMGF=1__ Set the module into text mode
 - __AT+CMGL="ALL"__ List all text messages that are on the network
-- __AT+CMGR=<index>__ read an SMS at a specific index
+- __AT+CMGR=\<index\>__ read an SMS at a specific index
