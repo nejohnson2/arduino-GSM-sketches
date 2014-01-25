@@ -40,11 +40,11 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 ####Notes on sending an SMS with AT Commands
 There are a series of commands which must be executed in order to send an SMS using AT Commands.  
 
-__AT+CMGF=1__ Set the module into text mode
-__AT+CMGS="destination phone number", 129, <body of message> <hex return character 1A>__
+- __AT+CMGF=1__ Set the module into text mode
+- __AT+CMGS="destination phone number", 129, <body of message> <hex return character 1A>__
 
 ####Notes on receiving SMS messages
 
-__AT+CMGF=1__ Set the module into text mode
-__AT+CMGL="ALL"__ List all text messages that are on the network
-__AT+CMGR=<index>__ read an SMS at a specific index
+- __AT+CMGF=1__ Set the module into text mode
+- __AT+CMGL="ALL"__ List all text messages that are on the network
+- __AT+CMGR=<index>__ read an SMS at a specific index
