@@ -4,6 +4,9 @@
   GSM Shield.  Upload the sketch and use Cool Term to send AT Commands
   directly to the GSM Module.  
   
+  View Quectel M10 AT Command Set:
+  http://arduino.cc/en/uploads/Main/Quectel_M10_AT_commands.pdf
+  
 */
 
 #include <SoftwareSerial.h>
