@@ -50,3 +50,8 @@ The module must be in text mode.  Then you can query the network for all of the 
 - __AT+CMGF=1__ Set the module into text mode
 - __AT+CMGL="ALL"__ List all text messages that are on the network
 - __AT+CMGR=\<index\>__ read an SMS at a specific index
+
+####Notes on deleting SMS messages
+Deleting messages is very simple but very important to do as the buffer size of the GSM is not very big.  This means that it can only display two or three messages at a time when you use the command __AT+CMGL="ALL"__. By deleting old messages, you will be able to see the newest message.
+
+- __AT+CMGD=\<index\>__ delete an SMS message at a certain index
