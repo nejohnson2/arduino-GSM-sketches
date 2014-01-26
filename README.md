@@ -32,7 +32,7 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 - __AT+CREG?__ Is the module registered to the network?
 - __AT+COPS?__ What network is the module registered?
 - __AT+CMGF=1__ This puts the module into text mode so messages can be sent/received
-- __AT+CMGS="number",129, \<body of message\> \<hex return character '1A'\>__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex.
+- __AT+CMGS="number",129, \<body of message\> \<hex return character '1A'\>__ Send a text message.  When using CoolTerm, enter this command, the use 'Command+T' to bring up another window.  This will let you type ASCII and Hex.  Type your message, and the add '1A' as Hex. Note: When sending a message through OpenBTS, you do not need to use the 129.
 - __AT+CMGL="ALL"__ Lists all text messages that are on the device (or network)
 - __AT+CMGR=<index>__ Read SMS message at index number
 - __AT+QBAND?__ What band am I on?
@@ -43,7 +43,7 @@ All of these commands work on the Quectel M10 GSM module which is used on the Ar
 There are a series of commands which must be executed in order to send an SMS using AT Commands.  First the module must be in text mode.  Then, you must send the AT+CMGS command with the destination number, 129, body of the message and a return character.  When using Cool Term this character must be a hex character.  Not sure if this is always the case.
 
 - __AT+CMGF=1__ Set the module into text mode
-- __AT+CMGS="destination phone number", 129, \<body of message\> \<hex return character '1A'\>__
+- __AT+CMGS="destination phone number", 129, \<body of message\> \<hex return character '1A'\>__ Note: When sending SMS messages through OpenBTS you do not need to use the 129 code.
 
 ####Notes on receiving SMS messages
 The module must be in text mode.  Then you can query the network for all of the messages or a message at a specific index.
