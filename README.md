@@ -61,7 +61,7 @@ Deleting messages is very simple but very important to do as the buffer size of 
 ####IMSI/TMSI
 As mentioned above, you can access the IMSI number with the command __AT+CIMI__.  The TMSI is also available through accessing the SIM card, though a bit more complicated.  The AT Command is __AT+CRSM__ which provides access to the SIM card information.  To access the TMSI, use the command:
 
-'''
+```
 AT+CRSM=176,28542,0,0,11
-'''
+```
 
