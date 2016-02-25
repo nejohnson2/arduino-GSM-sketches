@@ -64,4 +64,5 @@ As mentioned above, you can access the IMSI number with the command __AT+CIMI__.
 ```
 AT+CRSM=176,28542,0,0,11
 ```
+The TMSI is the first eight digits in the response value.  These are in HEX format.
 
