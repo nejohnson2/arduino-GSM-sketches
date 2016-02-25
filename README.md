@@ -57,3 +57,11 @@ The module must be in text mode.  Then you can query the network for all of the 
 Deleting messages is very simple but very important to do as the buffer size of the GSM is not very big.  This means that it can only display two or three messages at a time when you use the command __AT+CMGL="ALL"__. By deleting old messages, you will be able to see the newest message.
 
 - __AT+CMGD=\<index\>__ delete an SMS message at a certain index
+ 
+####IMSI/TMSI
+As mentioned above, you can access the IMSI number with the command __AT+CIMI__.  The TMSI is also available through accessing the SIM card, though a bit more complicated.  The AT Command is __AT+CRSM__ which provides access to the SIM card information.  To access the TMSI, use the command:
+
+'''
+AT+CRSM=176,28542,0,0,11
+'''
+
